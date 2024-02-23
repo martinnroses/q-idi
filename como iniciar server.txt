@@ -1,0 +1,3 @@
+Debo pegar en la consola el siguiente texto:
+
+http-server -p 3000

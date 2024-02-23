@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q-idi</title>
+        <meta charset="utf-8">
+        <!-- <meta name="keywords" content="quidditch">
+        <meta name="description" content="¡Vive la magia en el mejor deporte del mundo! Sube a tu escoba y demuestra tu calidad.">
+        <link rel="icon" href="iquaffle.ico"> -->
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+    </head>
+    <body>
+        <header class="seccion-header">
+            <nav class="nav-superior">
+
+            </nav>
+            <h1 class="nombre-pagina">ESTADIO DE QUIDDITCH</h1>
+        </header>
+        <section id="lista-de-equipos">
+            <input type="radio" name="equipo" id="blackSerpentsBoton" />
+            <label class="tarjeta-de-equipo" for="blackSerpentsBoton">
+                <img src="./imagenes/Black Serpents 100 efecto.png" class="escudo-equipo" alt="Black Serpents">
+            </label>
+            <input type="radio" name="equipo" id="dublinDelayersBoton" />
+            <label class="tarjeta-de-equipo" for="dublinDelayersBoton">
+                <img src="./imagenes/Dublin Delayers 100 efecto.png" class="escudo-equipo" alt="Dublin Delayers">
+            </label>
+            <input type="radio" name="equipo" id="eisenbergErklingsBoton" />
+            <label class="tarjeta-de-equipo" for="eisenbergErklingsBoton">
+                <img src="./imagenes/Eisenberg Erklings 100 efecto.png" class="escudo-equipo" alt="Eisenberg Erklings">
+            </label>
+            <input type="radio" name="equipo" id="firenzeFalconsBoton" />
+            <label class="tarjeta-de-equipo" for="firenzeFalconsBoton">
+                <img src="./imagenes/Firenze Falcons 100 efecto.png" class="escudo-equipo" alt="Firenze Falcons">
+            </label>
+            <input type="radio" name="equipo" id="holyheadHarpiesBoton" />
+            <label class="tarjeta-de-equipo" for="holyheadHarpiesBoton">
+                <img src="./imagenes/Holyhead Harpies 100 efecto.png" class="escudo-equipo" alt="Holyhead Harpies">
+            </label>
+            <input type="radio" name="equipo" id="kattegatKrakorBoton" />
+            <label class="tarjeta-de-equipo" for="kattegatKrakorBoton">
+                <img src="./imagenes/Kattegat Krakor 100 efecto.png" class="escudo-equipo" alt="Kattegat Krakor">
+            </label>
+            <input type="radio" name="equipo" id="montroseMagpiesBoton" />
+            <label class="tarjeta-de-equipo" for="montroseMagpiesBoton">
+                <img src="./imagenes/Montrose Magpies 100 efecto.png" class="escudo-equipo" alt="Montrose Magpies">
+            </label>
+            <input type="radio" name="equipo" id="parisPromiseBoton" />
+            <label class="tarjeta-de-equipo" for="parisPromiseBoton">
+                <img src="./imagenes/Paris Promise 100 efecto.png" class="escudo-equipo" alt="Paris Promise">
+            </label>
+            <input type="radio" name="equipo" id="puddlemereUnitedBoton" />
+            <label class="tarjeta-de-equipo" for="puddlemereUnitedBoton">
+                <img src="./imagenes/Puddlemere United 100 efecto.png" class="escudo-equipo" alt="Puddlemere United">
+            </label>
+            <input type="radio" name="equipo" id="sochiSnidgetsBoton" />
+            <label class="tarjeta-de-equipo" for="sochiSnidgetsBoton">
+                <img src="./imagenes/Sochi Snidgets 100 efecto.png" class="escudo-equipo" alt="Sochi Snidgets">
+            </label>
+            <input type="radio" name="equipo" id="tutshillTornadosBoton" />
+            <label class="tarjeta-de-equipo" for="tutshillTornadosBoton">
+                <img src="./imagenes/Tutshill Tornados 100 efecto.png" class="escudo-equipo" alt="Tutshill Tornados">
+            </label>
+            <input type="radio" name="equipo" id="vratsaVulturesBoton" />
+            <label class="tarjeta-de-equipo" for="vratsaVulturesBoton">
+                <img src="./imagenes/Vratsa Vultures 100 efecto.png" class="escudo-equipo" alt="Vratsa Vultures">
+            </label>
+        </section>
+        
+        <section id="seleccionar-equipo">
+            <button class="botones-elegir-equipo" id="elegir-equipo-a">EQUIPO A</button>
+            <button class="botones-elegir-equipo" id="elegir-equipo-b">EQUIPO B</button>
+        </section>
+        
+        <section class = "todos-los-botones">
+            <div class = "marcador">
+                <text class="contenido-marcador" id="marcador-equipo-a">AA</text>
+                <text class="contenido-marcador" id="resultado-marcador-equipo-a">000</text>
+                <text class="contenido-marcador" id="marcador-separador"> - </text>
+                <text class="contenido-marcador" id="resultado-marcador-equipo-b">000</text>
+                <text class="contenido-marcador" id="marcador-equipo-b">BB</text>
+            </div>
+            <div class ="botones-neutrales">
+                <button class="boton-arbitro" id="iniciar-turno-impar">Impar</button>
+                <button class="boton-arbitro" id="calcular-ganador-cazadores-1">Ganador 1</button>
+                <button class="boton-arbitro" id="calcular-ganador-cazadores-2">Ganador 2</button>
+                <button class="boton-arbitro" id="iniciar-turno-par">Par</button>
+                <button class="boton-arbitro" class="turnos-buscador" id="iniciar-turno-buscador">Buscador</button>
+                <button class="boton-arbitro" class="turnos-buscador" id="ubicacion-snitch">Ubicación Snitch</button>
+                <button class="boton-arbitro" class="turnos-buscador" id="comportamiento-snitch">Vuelo Snitch</button>
+                <button class="boton-arbitro" class="turnos-buscador" id="calcular-avistamiento">Avistamiento</button>
+                <button class="boton-arbitro" class="turnos-buscador" id="calcular-avance">Avance</button>
+            </div>
+            <div class = "equipo-A">
+                <h2 class="nombre-equipo" id="equipo-a">Equipo A</h2>
+                <h3 class="nombre-jugador" id="nombre-guardian-a">Guardián A</h3>
+                <text class="atributos-jugador" id="atributos-guardian-a">Atributos</text><br>
+                <button class="tirar-dados" id="reflejos-guardian-a">Reflejos</button>
+                <button class="tirar-dados" id="volada-guardian-a">Volada</button>
+                <button class="tirar-dados" id="presion-guardian-a">Presión</button>
+                <button class="tirar-dados" id="evasion-guardian-a">Evasión</button><br>
+                <button class="habilidad-especial" id="atajada-relampago-a">AR</button>
+                <button class="habilidad-especial" id="starfish-and-stick-a">SS</button>
+                <button class="habilidad-especial" id="double-eight-loop-a">8L</button>
+                <button class="habilidad-especial" id="all-in-a">AI</button>
+                <button class="habilidad-especial" id="pase-largo-a">PL</button>
+                <button class="habilidad-especial" id="tiro-resbalon-a">TR</button>
+
+                <h3 class="nombre-jugador" id="nombre-golpeador-1a">Golpeador 1A</h3>
+                <text class="atributos-jugador" id="atributos-golpeador-1a">Atributos</text><br>
+                <button class="tirar-dados" id="golpe-golpeador-1a">Golpe</button>
+                <button class="tirar-dados" id="intercepcion-golpeador-1a">Intercepción</button>
+                <button class="tirar-dados" id="evasion-golpeador-1a">Evasión</button>
+                <button class="tirar-dados" id="pasar-turno-golpeador-1a">Pasar</button><br>
+                <button title="Golpe de Francotirador" class="habilidad-especial" id="golpe-de-francotirador-1a">GF</button>
+                <button title="Bludger Backbeat" class="habilidad-especial" id="bludger-backbeat-1a">BB</button>
+                <button class="habilidad-especial" id="golpe-bombeado-1a">GB</button>
+                <button class="habilidad-especial" id="golpe-canon-1a">GC</button>
+                <button class="habilidad-especial" id="angel-guardian-1a">AG</button>
+                <button class="habilidad-especial" id="interferencia-de-aguila-1a">IA</button>
+
+                <h3 class="nombre-jugador" id="nombre-golpeador-2a">Golpeador 2A</h3>
+                <text class="atributos-jugador" id="atributos-golpeador-2a">Atributos</text><br>
+                <button class="tirar-dados" id="golpe-golpeador-2a">Golpe</button>
+                <button class="tirar-dados" id="intercepcion-golpeador-2a">Intercepción</button>
+                <button class="tirar-dados" id="evasion-golpeador-2a">Evasión</button>
+                <button class="tirar-dados" id="pasar-turno-golpeador-2a">Pasar</button><br>
+                <button title="Golpe de Francotirador" class="habilidad-especial" id="golpe-de-francotirador-2a">GF</button>
+                <button title="Bludger Backbeat" class="habilidad-especial" id="bludger-backbeat-2a">BB</button>
+                <button class="habilidad-especial" id="golpe-bombeado-2a">GB</button>
+                <button class="habilidad-especial" id="golpe-canon-2a">GC</button>
+                <button class="habilidad-especial" id="angel-guardian-2a">AG</button>
+                <button class="habilidad-especial" id="interferencia-de-aguila-2a">IA</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-1a">Cazador 1A</h3>
+                <text class="atributos-jugador" id="atributos-cazador-1a">Atributos</text><br>
+                <button class="tirar-dados agilidades" id="agilidad-cazador-1a">Agilidad</button>
+                <button class="tirar-dados defensas" id="defensa-cazador-1a">Defensa</button>
+                <button class="tirar-dados reacciones" id="reaccion-cazador-1a">Reacción</button>
+                <button class="tirar-dados evasivas" id="evasion-cazador-1a">Evasión</button>
+                <button class="tirar-dados ofensivas" id="disparo-cazador-1a">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-1a">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-1a">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-1a">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-1a">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-1a">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-1a">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-1a">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-1a">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-1a">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-1a">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-1a">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-1a">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-1a">DV</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-2a">Cazador 2A</h3>
+                <text class="atributos-jugador" id="atributos-cazador-2a">Atributos</text><br>
+                <button class="tirar-dados" id="agilidad-cazador-2a">Agilidad</button>
+                <button class="tirar-dados" id="defensa-cazador-2a">Defensa</button>
+                <button class="tirar-dados" id="reaccion-cazador-2a">Reacción</button>
+                <button class="tirar-dados" id="evasion-cazador-2a">Evasión</button>
+                <button class="tirar-dados" id="disparo-cazador-2a">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-2a">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-2a">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-2a">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-2a">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-2a">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-2a">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-2a">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-2a">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-2a">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-2a">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-2a">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-2a">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-2a">DV</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-3a">Cazador 3A</h3>
+                <text class="atributos-jugador" id="atributos-cazador-3a">Atributos</text><br>
+                <button class="tirar-dados" id="agilidad-cazador-3a">Agilidad</button>
+                <button class="tirar-dados" id="defensa-cazador-3a">Defensa</button>
+                <button class="tirar-dados" id="reaccion-cazador-3a">Reacción</button>
+                <button class="tirar-dados" id="evasion-cazador-3a">Evasión</button>
+                <button class="tirar-dados" id="disparo-cazador-3a">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-3a">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-3a">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-3a">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-3a">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-3a">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-3a">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-3a">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-3a">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-3a">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-3a">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-3a">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-3a">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-3a">DV</button>
+                
+                <h3 class="nombre-jugador" id="nombre-buscador-a">Buscador A</h3>
+                <text class="atributos-jugador" id="atributos-buscador-a">Atributos</text><br>
+                <button class="tirar-dados" id="velocidad-buscador-a">Velocidad</button>
+                <button class="tirar-dados" id="avistamiento-buscador-a">Percepción</button>
+                <button class="tirar-dados" id="evasion-buscador-a">Evasión</button>
+                <button class="tirar-dados" id="agarre-buscador-a">Agarre</button>
+                <button class="tirar-dados" id="continuar-buscador-a">Continuar</button><br>
+                <button class="habilidad-especial" id="amago-de-wronski-a">AW</button>
+                <button class="habilidad-especial" id="perspicacia-a">PE</button>
+                <button class="habilidad-especial" id="ultimo-aliento-a">UA</button>
+                <button class="habilidad-especial" id="caida-en-picada-a">CP</button>
+                <button class="habilidad-especial" id="escarbato-a">ES</button>
+                <button class="habilidad-especial" id="plumpton-pass-a">PP</button>
+
+                <h3 class="nombre-jugador">Pase a:</h3>
+                <button class="receptor-pase" id="receptor-pase-cazador-1a">Cazador 1</button>
+                <button class="receptor-pase" id="receptor-pase-cazador-2a">Cazador 2</button>
+                <button class="receptor-pase" id="receptor-pase-cazador-3a">Cazador 3</button>
+            </div>
+            <div class = "desarrollo-partido" id="turno-a-turno-container">
+                <h2 class="descripcion-turnos" class="nombre-equipo">Turno a turno:</h3>
+                <div id="turno-a-turno"></div>
+            </div>
+            <div class = "equipo-B">
+                <h2 class="nombre-equipo" id="equipo-b">Equipo B</h2>
+                <h3 class="nombre-jugador" id="nombre-guardian-b">Guardián B</h3>
+                <text class="atributos-jugador" id="atributos-guardian-b">Atributos</text><br>
+                <button class="tirar-dados" id="reflejos-guardian-b">Reflejos</button>
+                <button class="tirar-dados" id="volada-guardian-b">Volada</button>
+                <button class="tirar-dados" id="presion-guardian-b">Presión</button>
+                <button class="tirar-dados" id="evasion-guardian-b">Evasión</button><br>
+                <button class="habilidad-especial" id="atajada-relampago-b">AR</button>
+                <button class="habilidad-especial" id="starfish-and-stick-b">SS</button>
+                <button class="habilidad-especial" id="double-eight-loop-b">8L</button>
+                <button class="habilidad-especial" id="all-in-b">AI</button>
+                <button class="habilidad-especial" id="pase-largo-b">PL</button>
+                <button class="habilidad-especial" id="tiro-resbalon-b">TR</button>
+
+                <h3 class="nombre-jugador" id="nombre-golpeador-1b">Golpeador 1B</h3>
+                <text class="atributos-jugador" id="atributos-golpeador-1b">Atributos</text><br>
+                <button class="tirar-dados" id="golpe-golpeador-1b">Golpe</button>
+                <button class="tirar-dados" id="intercepcion-golpeador-1b">Intercepción</button>
+                <button class="tirar-dados" id="evasion-golpeador-1b">Evasión</button>
+                <button class="tirar-dados" id="pasar-turno-golpeador-1b">Pasar</button><br>
+                <button title="Golpe de Francotirador" class="habilidad-especial" id="golpe-de-francotirador-1b">GF</button>
+                <button title="Bludger Backbeat" class="habilidad-especial" id="bludger-backbeat-1b">BB</button>
+                <button class="habilidad-especial" id="golpe-bombeado-1b">GB</button>
+                <button class="habilidad-especial" id="golpe-canon-1b">GC</button>
+                <button class="habilidad-especial" id="angel-guardian-1b">AG</button>
+                <button class="habilidad-especial" id="interferencia-de-aguila-1b">IA</button>
+
+                <h3 class="nombre-jugador" id="nombre-golpeador-2b">Golpeador 2B</h3>
+                <text class="atributos-jugador" id="atributos-golpeador-2b">Atributos</text><br>
+                <button class="tirar-dados" id="golpe-golpeador-2b">Golpe</button>
+                <button class="tirar-dados" id="intercepcion-golpeador-2b">Intercepción</button>
+                <button class="tirar-dados" id="evasion-golpeador-2b">Evasión</button>
+                <button class="tirar-dados" id="pasar-turno-golpeador-2b">Pasar</button><br>
+                <button title="Golpe de Francotirador" class="habilidad-especial" id="golpe-de-francotirador-2b">GF</button>
+                <button title="Bludger Backbeat" class="habilidad-especial" id="bludger-backbeat-2b">BB</button>
+                <button class="habilidad-especial" id="golpe-bombeado-2b">GB</button>
+                <button class="habilidad-especial" id="golpe-canon-2b">GC</button>
+                <button class="habilidad-especial" id="angel-guardian-2b">AG</button>
+                <button class="habilidad-especial" id="interferencia-de-aguila-2b">IA</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-1b">Cazador 1B</h3>
+                <text class="atributos-jugador" id="atributos-cazador-1b">Atributos</text><br>
+                <button class="tirar-dados" id="agilidad-cazador-1b">Agilidad</button>
+                <button class="tirar-dados" id="defensa-cazador-1b">Defensa</button>
+                <button class="tirar-dados" id="reaccion-cazador-1b">Reacción</button>
+                <button class="tirar-dados" id="evasion-cazador-1b">Evasión</button>
+                <button class="tirar-dados" id="disparo-cazador-1b">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-1b">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-1b">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-1b">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-1b">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-1b">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-1b">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-1b">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-1b">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-1b">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-1b">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-1b">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-1b">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-1b">DV</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-2b">Cazador 2B</h3>
+                <text class="atributos-jugador" id="atributos-cazador-2b">Atributos</text><br>
+                <button class="tirar-dados" id="agilidad-cazador-2b">Agilidad</button>
+                <button class="tirar-dados" id="defensa-cazador-2b">Defensa</button>
+                <button class="tirar-dados" id="reaccion-cazador-2b">Reacción</button>
+                <button class="tirar-dados" id="evasion-cazador-2b">Evasión</button>
+                <button class="tirar-dados" id="disparo-cazador-2b">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-2b">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-2b">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-2b">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-2b">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-2b">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-2b">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-2b">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-2b">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-2b">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-2b">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-2b">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-2b">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-2b">DV</button>
+
+                <h3 class="nombre-jugador" id="nombre-cazador-3b">Cazador 3B</h3>
+                <text class="atributos-jugador" id="atributos-cazador-3b">Atributos</text><br>
+                <button class="tirar-dados" id="agilidad-cazador-3b">Agilidad</button>
+                <button class="tirar-dados" id="defensa-cazador-3b">Defensa</button>
+                <button class="tirar-dados" id="reaccion-cazador-3b">Reacción</button>
+                <button class="tirar-dados" id="evasion-cazador-3b">Evasión</button>
+                <button class="tirar-dados" id="disparo-cazador-3b">Disparo</button><br>
+                <button class="habilidad-especial" id="finta-de-porskov-3b">FP</button>
+                <button class="habilidad-especial" id="mano-cambiada-3b">MC</button>
+                <button class="habilidad-especial" id="robo-speelman-3b">RS</button>
+                <button class="habilidad-especial" id="transylvanian-tackle-3b">TT</button>
+                <button class="habilidad-especial" id="intuicion-fugaz-3b">IF</button>
+                <button class="habilidad-especial" id="reverse-pass-3b">RP</button>
+                <button class="habilidad-especial" id="sloth-grip-roll-3b">SG</button>
+                <button class="habilidad-especial" id="tiro-largo-3b">TL</button>
+                <button class="habilidad-especial" id="disparo-de-torbellino-3b">DT</button>
+                <button class="habilidad-especial" id="disparo-con-amague-3b">DA</button>
+                <button class="habilidad-especial" id="efecto-finbourgh-3b">EF</button>
+                <button class="habilidad-especial" id="knuckle-ball-3b">KB</button>
+                <button class="habilidad-especial" id="disparo-de-volea-3b">DV</button>
+                
+                <h3 class="nombre-jugador" id="nombre-buscador-b">Buscador B</h3>
+                <text class="atributos-jugador" id="atributos-buscador-b">Atributos</text><br>
+                <button class="tirar-dados" id="velocidad-buscador-b">Velocidad</button>
+                <button class="tirar-dados" id="avistamiento-buscador-b">Percepción</button>
+                <button class="tirar-dados" id="evasion-buscador-b">Evasión</button>
+                <button class="tirar-dados" id="agarre-buscador-b">Agarre</button>
+                <button class="tirar-dados" id="continuar-buscador-b">Continuar</button><br>
+                <button class="habilidad-especial" id="amago-de-wronski-b">AW</button>
+                <button class="habilidad-especial" id="perspicacia-b">PE</button>
+                <button class="habilidad-especial" id="ultimo-aliento-b">UA</button>
+                <button class="habilidad-especial" id="caida-en-picada-b">CP</button>
+                <button class="habilidad-especial" id="escarbato-b">ES</button>
+                <button class="habilidad-especial" id="plumpton-pass-b">PP</button>
+
+                <h3 class="nombre-jugador">Pase a:</h3>
+                <button class="receptor-pase" id="receptor-pase-cazador-1b">Cazador 1</button>
+                <button class="receptor-pase" id="receptor-pase-cazador-2b">Cazador 2</button>
+                <button class="receptor-pase" id="receptor-pase-cazador-3b">Cazador 3</button>
+            </div>
+        </section>
+        <script type="module" src="principal.js"></script>
+        <!-- <script type="module" src="equipos-elegidos-a.js"></script>
+        <script type="module" src="equipos-a/montrose-magpies-a.js"></script>
+        <script type="module" src="equipos-elegidos-b.js"></script> -->
+        <script type="module" scr="ocultar-botones-especiales.js"></script>
+    </body>
+</html>
